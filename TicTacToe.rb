@@ -22,4 +22,20 @@ class Board
 	end
 		print "\n"
 	end
-	
+
+	def winner
+		(0..3)each.do|i|
+		 if @board[i][0]==@board[i][1] && @board[i][1] == @board[i][2]
+		 		return @board[i][0] unless @board[i][0] == " "
+
+		elsif @board[0][i] == @board[1][i] && @board[1][i] == @board[2][i]
+			return @board[0][i] unless @board[0][i] == " "
+			end
+		end
+		#diagonal "x"
+
+		if (@board[0][0] == @board[1][1] && @board[1][1] == @board[2][2]) ||
+			(@board[0][2] == @board[1][1] && @board[1][1] == @board[2][0])
+			return @board[1][1] unless @board[1][1] == " "
+		end
+		

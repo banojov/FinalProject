@@ -74,7 +74,7 @@ while board.find_Winner == "U"
 
   puts "\n" * 100
 
-  if board.remove(currentplayer,player, row, col)
+  if board.remove(currentplayer, row, col)
     if currentplayer == "X"
       currentplayer = "O"
     else
